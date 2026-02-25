@@ -3,11 +3,13 @@
 An end-to-end analysis of revenue trends and user conversion funnel for a global e-commerce platform using SQL (BigQuery), Python, and Tableau.
 
 ### Key Technical Steps:
-* SQL (BigQuery): Data extraction using CTEs, joining session/user tables, and using Window Functions (DENSE_RANK, SUM OVER) for market ranking.
+* SQL (BigQuery): Integrated 6 different tables (sessions, params, accounts, orders, products) using multi-level LEFT JOINs to build a comprehensive data foundation.
 
-* Python (Pandas): Data cleaning, EDA, and calculating correlations between user traffic and final revenue.
+* Data Modeling: Applied CTEs for clean code structure and UNION ALL to create a vertical event-based model, optimized for funnel analysis.
 
-* Tableau: Built an interactive dashboard featuring a Global Performance Matrix (Heatmap) with separate color legends for Revenue, Sessions, and Registration %.
+* Python (Pandas): Automated data extraction via google.cloud.bigquery and performed data validation using describe() and info() methods.
+
+* Business Logic: Standardized raw technical fields into clear business dimensions like is_verified_account or traffic_channel for end-user reporting.
 
 ### Top Business Insights
 * High Potential: Identified Taiwan as a leader in registration efficiency (8.5%).
